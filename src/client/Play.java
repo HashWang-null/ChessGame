@@ -7,6 +7,7 @@ public class Play {
         GameFrame frame = GameFrame.getInstance(gamePanel);
         Client client = new Client();
         GameOptionPane.initGameFrame(frame, client);
+        client.setFrame(frame);
         frame.setVisible(true);
         frame.setClient(client);
         client.connectionToServer();

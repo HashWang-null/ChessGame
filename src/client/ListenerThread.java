@@ -68,10 +68,14 @@ public class ListenerThread extends Thread{
                 case "PartnerFailed":
                     GameOptionPane.showPartnerError(msg.info.get("info"));
                     break;
-                case "ConnectionSuccessfully":
+                case "MatchFailed":
+//                    GameOptionPane.showPartnerError(msg.info.get("info"));
+                    if (msg.info.get("bec").equals("NoPartner")) {
+                        client.gameFrame.rightPanel.setMatchingStatus();
+                    }
                     break;
                 case "MatchSuccessfully":
-
+                    client.matchPartner(msg.info.get("address"), msg.info.get("position"));
                     break;
                 default:
                     break;

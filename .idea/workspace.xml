@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59bfe01e-6dbc-4e95-9fc4-a9031309d035" name="Default Changelist" comment="" />
+    <list default="true" id="59bfe01e-6dbc-4e95-9fc4-a9031309d035" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/ListenerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/ListenerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/Play.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/Play.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/ListenerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ListenerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Play.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +24,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1woGKZVFpMNXQnL8VStWt4ESX1T" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,6 +40,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/Android" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -134,7 +148,7 @@
       <workItem from="1629344303019" duration="8167000" />
       <workItem from="1629376543652" duration="150000" />
       <workItem from="1629376706391" duration="718000" />
-      <workItem from="1629377705667" duration="13816000" />
+      <workItem from="1629377705667" duration="15515000" />
     </task>
     <servers />
   </component>
@@ -158,22 +172,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="977" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1629377683496" />
-    <state width="1478" height="269" key="GridCell.Tab.0.bottom" timestamp="1629393359578">
+    <state width="1478" height="269" key="GridCell.Tab.0.bottom" timestamp="1629396904261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1478" height="269" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629393359578" />
-    <state width="1478" height="269" key="GridCell.Tab.0.center" timestamp="1629393359578">
+    <state width="1478" height="269" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629396904261" />
+    <state width="1478" height="269" key="GridCell.Tab.0.center" timestamp="1629396904261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1478" height="269" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629393359578" />
-    <state width="1478" height="269" key="GridCell.Tab.0.left" timestamp="1629393359578">
+    <state width="1478" height="269" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629396904261" />
+    <state width="1478" height="269" key="GridCell.Tab.0.left" timestamp="1629396904261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1478" height="269" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629393359578" />
-    <state width="1478" height="269" key="GridCell.Tab.0.right" timestamp="1629393359578">
+    <state width="1478" height="269" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629396904261" />
+    <state width="1478" height="269" key="GridCell.Tab.0.right" timestamp="1629396904261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1478" height="269" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629393359578" />
+    <state width="1478" height="269" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629396904261" />
     <state x="473" y="102" key="SettingsEditor" timestamp="1629377687745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -224,6 +238,11 @@
           <url>file://$PROJECT_DIR$/src/client/GameOptionPane.java</url>
           <line>29</line>
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/server/ServerThread.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

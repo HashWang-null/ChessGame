@@ -74,12 +74,14 @@ public class Client {
     }
 
     public void matchPartner(String partnerAddress, String position) {
-        if (position.equals("Guest")) {
+        if (position.equals("guest")) {
             this.position = position;
             this.isMatched = true;
-        } else if (position.equals("Host")){
+            this.gameFrame.rightPanel.setPartner(partnerAddress);
+        } else if (position.equals("host")){
             this.position = position;
             this.isMatched = true;
+            this.gameFrame.rightPanel.setPartner(partnerAddress);
         } else {
             throw new RuntimeException();
         }
