@@ -9,7 +9,6 @@ import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
-import java.util.List;
 
 public class ListenerThread extends Thread{
     static Socket socket = null;
@@ -70,8 +69,8 @@ public class ListenerThread extends Thread{
                     break;
                 case "MatchFailed":
 //                    GameOptionPane.showPartnerError(msg.info.get("info"));
-                    if (msg.info.get("bec").equals("NoPartner")) {
-                        client.gameFrame.rightPanel.setMatchingStatus();
+                    if (msg.info.get("bec") != null) {
+                        client.gameFrame.rightPanel.setMatchingPartner();
                     }
                     break;
                 case "MatchSuccessfully":

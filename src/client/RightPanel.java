@@ -27,7 +27,8 @@ public class RightPanel extends JPanel {
         setNonePartner();
     }
 
-    public void setMatchingStatus() {
+    public void setMatchingPartner() {
+        this.label_PartnerInfo.setText("暂无匹配");
         this.button_MatchPartner.setText("匹配中");
         this.button_MatchPartner.setEnabled(false);
         this.button_Send.setEnabled(false);
@@ -38,6 +39,7 @@ public class RightPanel extends JPanel {
     }
 
     public void setNonePartner() {
+        this.label_PartnerInfo.setText("暂无匹配");
         this.button_MatchPartner.setText("匹配对手");
         this.button_MatchPartner.setEnabled(true);
         this.button_Send.setEnabled(false);
@@ -48,6 +50,7 @@ public class RightPanel extends JPanel {
     }
 
     public void setPartner(String partnerInfo) {
+        this.label_PartnerInfo.setText("匹配成功");
         this.button_MatchPartner.setText("匹配对手");
         this.button_MatchPartner.setEnabled(false);
         this.button_Send.setEnabled(true);
@@ -135,7 +138,7 @@ public class RightPanel extends JPanel {
                 if (client == null) {
                     throw new RuntimeException("client为空");
                 }
-                setMatchingStatus();
+                setMatchingPartner();
                 client.requestPartner();
             }
         });

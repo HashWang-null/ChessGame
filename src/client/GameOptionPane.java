@@ -50,16 +50,22 @@ public class GameOptionPane {
         }
     }
 
-    public static int showPartnerError(String info) {
+    public static void showPartnerError(String info) {
         if (gf == null) {
             throw new RuntimeException("未初始化!");
         }
         Object[] options = {"重新匹配", "退出"};
-        return JOptionPane.showOptionDialog(gf,
-                info,
-                "警告",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null, options, options[0]);
+        int option = JOptionPane.showOptionDialog(gf,
+            info,
+            "警告",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE,
+            null, options, options[0]);
+        if (option == 0) {
+            client.setMatchingPartner();
+            client.requestPartner();
+        } else {
+            System.exit(0);
+        }
     }
 }

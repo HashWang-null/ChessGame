@@ -4,10 +4,10 @@ package client;
 import com.google.gson.Gson;
 import message.Message;
 
-import javax.swing.*;
 import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.HashMap;
 
 public class Client {
     Gson gson = new Gson();
@@ -18,17 +18,12 @@ public class Client {
     GameFrame gameFrame = null;
     ListenerThread listener;
 
-    boolean isMatched;
-    boolean isConnected;
+    boolean isMatched = false;
     String partnerInfo;
     String position;
 
     public void setFrame(GameFrame frame) {
         this.gameFrame = frame;
-    }
-
-    public void setListener(ListenerThread listener) {
-        this.listener = listener;
     }
 
     Client () {
@@ -75,6 +70,7 @@ public class Client {
 
     public void matchPartner(String partnerAddress, String position) {
         if (position.equals("guest")) {
+//            this.gameFrame.gamePanel.initSession();
             this.position = position;
             this.isMatched = true;
             this.gameFrame.rightPanel.setPartner(partnerAddress);
@@ -82,8 +78,39 @@ public class Client {
             this.position = position;
             this.isMatched = true;
             this.gameFrame.rightPanel.setPartner(partnerAddress);
+            this.gameFrame.gamePanel.color = GamePanel.BLACK_TYPE;
+            startSession(GamePanel.WHITE_TYPE);
+
         } else {
             throw new RuntimeException();
         }
+    }
+
+    public void setNonePartner() {
+        this.isMatched = false;
+        this.position = null;
+        this.gameFrame.rightPanel.setNonePartner();
+    }
+
+    public void setMatchingPartner() {
+        this.isMatched = false;
+        this.position = null;
+        this.gameFrame.rightPanel.setMatchingPartner();
+    }
+
+    public void startSession(int color) {
+        if (!this.position.equals("host")) {
+            throw new RuntimeException("不是主持人还想开局？");
+        }
+        Message msg = new Message(
+                "ClientCommand",
+                "StartSession",
+                new HashMap<String, String>() {
+                    {
+                        put("color", String.valueOf(color));
+                    }
+                });
+        this.sendMessage(gson.toJson(msg));
+        //等待对方确认
     }
 }

@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 public class ChessBoard {
     private int[][] boardArray;
     private ChessStepStack historySteps;
+    private int color;
     public static final int SIDE_NUM = 15;
     public static final int BLACK_TYPE = 1;
     public static final int WHITE_TYPE = 2;
@@ -19,10 +20,6 @@ public class ChessBoard {
         this.boardArray = new int[SIDE_NUM][SIDE_NUM];
     }
 
-    public ArrayList<ChessStep> getHistorySteps() {
-        return this.historySteps.steps;
-    }
-
     public static ChessBoard newInstance() {
         if(chessBoard == null) {
             chessBoard = new ChessBoard();
@@ -30,14 +27,18 @@ public class ChessBoard {
         return chessBoard;
     }
 
-    private void refreshChessBoard() {
+    public void refreshChessBoard() {
         for (int i = 0; i < SIDE_NUM; i++) {
             Arrays.fill(boardArray[i], BLANK);
         }
         this.historySteps.clear();
     }
 
-    private boolean isWin(ChessStep newStep) {
+    public ArrayList<ChessStep> getHistorySteps() {
+        return this.historySteps.steps;
+    }
+
+    public boolean isWin(ChessStep newStep) {
         int[] dx = {0, 1, 1, -1};
         int[] dy = {1, 0, 1, 1};
         for(int di = 0; di < 4; di++) {
@@ -64,12 +65,12 @@ public class ChessBoard {
         return false;
     }
 
-    private void dropChess(ChessStep newStep) {
+    public void dropChess(ChessStep newStep) {
         this.boardArray[newStep.getChessPoint().getY()][newStep.getChessPoint().getX()] = newStep.getChessType();
         this.historySteps.addNewStep(newStep);
     }
 
-    private boolean undoChessDrop() {
+    public boolean undoChessDrop() {
         ChessStep step = this.historySteps.getLastStep();
         if(step != null) {
             this.boardArray[step.getChessPoint().getY()][step.getChessPoint().getX()] = 0;

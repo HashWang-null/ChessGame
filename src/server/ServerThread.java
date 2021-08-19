@@ -63,7 +63,7 @@ public class ServerThread extends Thread {
                 System.out.println(this.partnerThread);
                 Message msg = new Message(
                         "ServerReply",
-                        "MatchFailed",
+                        "PartnerFailed",
                         new HashMap<String, String>() {
                             {
                                 put("info", "对手离线");
@@ -102,6 +102,10 @@ public class ServerThread extends Thread {
                     serverCommand(msg);
                     break;
                 case "ClientCommand":
+                    clientCommand(msg);
+                    break;
+                case "ClientReply":
+                    clientCommand(msg);
                     break;
                 default:
                     break;
@@ -185,6 +189,18 @@ public class ServerThread extends Thread {
     }
 
     private void clientCommand(Message message) {
-
+        if (this.partnerThread == null || !this.partnerThread.isAlive()) {
+            Message msg = new Message(
+                    "ServerReply",
+                    "PartnerFailed",
+                    new HashMap<String, String>() {
+                        {
+                            put("info", "对手离线");
+                        }
+                    });
+            this.sendMessage(gson.toJson(msg));
+            return;
+        }
+        this.partnerThread.sendMessage(gson.toJson(message));
     }
 }

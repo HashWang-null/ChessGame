@@ -1,10 +1,14 @@
 package client;
+import com.google.gson.Gson;
+import message.Message;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.HashMap;
 
 
 public class GamePanel extends JPanel {
@@ -15,16 +19,22 @@ public class GamePanel extends JPanel {
     public static final int BLANK           = ChessBoard.BLANK;
 
     private int panelSide = (SIDE_NUM+1) * LATTICE_SIDE;;
-    public int chessType;
-
+    public int color;
+    private ChessBoard chessBoard;
     public Client client;
+    private Gson gson = new Gson();
+    private int cID = 0;
 
     public GamePanel() {
-        this.chessType = BLACK_TYPE;
         initPanel();
     }
 
+    private int getCID() {
+        return cID ++;
+    }
+
     private void initPanel() {
+        this.chessBoard = ChessBoard.newInstance();
         this.setFocusable(true);
         initMouseListener();
         initKeyBoardListener();
@@ -39,6 +49,14 @@ public class GamePanel extends JPanel {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public void initSession(int color) {
+        if (color != BLACK_TYPE && color != WHITE_TYPE) {
+            throw new RuntimeException("颜色匹配错误");
+        }
+        this.color = color;
+        repaint();
     }
 
     private void drawChessBoard(Graphics g) {
@@ -65,12 +83,28 @@ public class GamePanel extends JPanel {
 
             @Override
             public void mouseReleased(MouseEvent e) {
-                Point  mousePoint = getMousePosition();
-                if(mousePoint.x > -1 && mousePoint.y > -1 && mousePoint.x < panelSide && mousePoint.y < panelSide) {
-                    int index_x = (mousePoint.x + (LATTICE_SIDE>>1)) / LATTICE_SIDE - 1;
-                    int index_y = (mousePoint.y + (LATTICE_SIDE>>1)) / LATTICE_SIDE - 1;
-                    System.out.println(index_x + "__" +  index_y);
-                    drawChess(BLACK_TYPE, index_x, index_y);
+                if (client.isMatched = true) {
+                    Point mousePoint = getMousePosition();
+                    if (mousePoint.x > -1 && mousePoint.y > -1 && mousePoint.x < panelSide && mousePoint.y < panelSide) {
+                        int index_x = (mousePoint.x + (LATTICE_SIDE >> 1)) / LATTICE_SIDE - 1;
+                        int index_y = (mousePoint.y + (LATTICE_SIDE >> 1)) / LATTICE_SIDE - 1;
+                        if (index_x < 0 || index_y < 0 || index_x >= SIDE_NUM || index_y >= SIDE_NUM) {
+                            return;
+                        }
+                        ChessBoard.ChessStep step = new ChessBoard.ChessStep(color, new ChessBoard.ChessPoint(index_x, index_y));
+                        Message msg = new Message(
+                                "ClientCommend",
+                                "DropChess",
+                                new HashMap<String, String>() {
+                                    {
+                                        put("cid", String.valueOf(getCID()));
+                                        put("x", String.valueOf(index_x));
+                                        put("y", String.valueOf(index_y));
+                                        put("color", String.valueOf("color"));
+                                    }
+                                });
+                        client.sendMessage(gson.toJson(msg));
+                    }
                 }
             }
 
@@ -102,12 +136,15 @@ public class GamePanel extends JPanel {
     }
 
     private void drawAllChess() {
-//        for(ChessBoard.ChessStep step : this.chessBoard.getHistorySteps()) {
-//            drawChess(step);
-//        }
+        for(ChessBoard.ChessStep step : this.chessBoard.getHistorySteps()) {
+            drawChess(step);
+        }
     }
 
-    private void drawChess(int color, int index_x, int index_y) {
+    private void drawChess(ChessBoard.ChessStep step) {
+        int color = step.getChessType();
+        int index_x = step.getChessPoint().getX();
+        int index_y = step.getChessPoint().getY();
         if ((index_x+1) * (index_y+1) * (SIDE_NUM-index_x) * (SIDE_NUM-index_y) == 0) {
             return;
         }
