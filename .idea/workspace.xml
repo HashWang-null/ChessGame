@@ -8,25 +8,14 @@
       <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/ChessBoard$ChessStepStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/ChessBoard$ChessStepStack.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/ChessBoard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GameOptionPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/GameOptionPane.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/ListenerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/ListenerThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/RightPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/RightPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/RightPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/RightPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/server/ServerThread$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/server/ServerThread$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/server/ServerThread$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/server/ServerThread$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/server/ServerThread$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/server/ServerThread$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/server/ServerThread$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/server/ServerThread$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/server/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/server/ServerThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ChessBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/GameOptionPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameOptionPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/ListenerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ListenerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/RightPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/RightPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ServerThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +155,7 @@
       <workItem from="1629376543652" duration="150000" />
       <workItem from="1629376706391" duration="718000" />
       <workItem from="1629377705667" duration="19784000" />
+      <workItem from="1629438949900" duration="4489000" />
     </task>
     <servers />
   </component>
@@ -189,22 +179,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="977" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1629377683496" />
-    <state width="1478" height="413" key="GridCell.Tab.0.bottom" timestamp="1629401325252">
+    <state width="1478" height="263" key="GridCell.Tab.0.bottom" timestamp="1629443367819">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1478" height="413" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629401325252" />
-    <state width="1478" height="413" key="GridCell.Tab.0.center" timestamp="1629401325252">
+    <state width="1478" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629443367819" />
+    <state width="1478" height="263" key="GridCell.Tab.0.center" timestamp="1629443367819">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1478" height="413" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629401325252" />
-    <state width="1478" height="413" key="GridCell.Tab.0.left" timestamp="1629401325252">
+    <state width="1478" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629443367819" />
+    <state width="1478" height="263" key="GridCell.Tab.0.left" timestamp="1629443367819">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1478" height="413" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629401325252" />
-    <state width="1478" height="413" key="GridCell.Tab.0.right" timestamp="1629401325252">
+    <state width="1478" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629443367819" />
+    <state width="1478" height="263" key="GridCell.Tab.0.right" timestamp="1629443367819">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1478" height="413" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629401325252" />
+    <state width="1478" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629443367819" />
     <state x="473" y="102" key="SettingsEditor" timestamp="1629377687745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -228,7 +218,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/client/ListenerThread.java</url>
-          <line>42</line>
+          <line>43</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -263,7 +253,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/client/Client.java</url>
-          <line>113</line>
+          <line>114</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

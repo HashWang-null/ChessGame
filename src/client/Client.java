@@ -78,9 +78,10 @@ public class Client {
             this.position = position;
             this.isMatched = true;
             this.gameFrame.rightPanel.setPartner(partnerAddress);
-            this.gameFrame.gamePanel.color = GamePanel.BLACK_TYPE;
-            startSession(GamePanel.WHITE_TYPE);
-
+//            this.gameFrame.gamePanel.color = GamePanel.BLACK_TYPE;
+//            startSession(GamePanel.WHITE_TYPE);
+            this.gameFrame.gamePanel.initSession(GamePanel.BLANK);
+            sendStartSession(GamePanel.WHITE_TYPE);
         } else {
             throw new RuntimeException();
         }
@@ -98,7 +99,7 @@ public class Client {
         this.gameFrame.rightPanel.setMatchingPartner();
     }
 
-    public void startSession(int color) {
+    public void sendStartSession(int color) {
         if (!this.position.equals("host")) {
             throw new RuntimeException("不是主持人还想开局？");
         }
@@ -112,5 +113,9 @@ public class Client {
                 });
         this.sendMessage(gson.toJson(msg));
         //等待对方确认
+    }
+
+    public BufferedReader getBr() {
+        return br;
     }
 }

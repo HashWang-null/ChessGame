@@ -34,6 +34,17 @@ public class ChessBoard {
         this.historySteps.clear();
     }
 
+    public boolean checkAvailable(ChessPoint point) {
+        return checkAvailable(point.getX(), point.getY());
+    }
+
+    public boolean checkAvailable(int index_x, int index_y) {
+        if (index_x >= 0 && index_y >= 0 && index_x < SIDE_NUM && index_y <SIDE_NUM) {
+            return boardArray[index_x][index_y] == BLANK;
+        }
+        return false;
+    }
+
     public ArrayList<ChessStep> getHistorySteps() {
         return this.historySteps.steps;
     }

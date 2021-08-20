@@ -8,6 +8,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.BufferedReader;
 import java.util.HashMap;
 
 
@@ -59,6 +60,15 @@ public class GamePanel extends JPanel {
         repaint();
     }
 
+    public void dropChess(ChessBoard.ChessStep step) {
+        this.chessBoard.dropChess(step);
+        drawChess(step);
+    }
+
+    public boolean checkAvailable(int index_x, int index_y) {
+        return chessBoard.checkAvailable(index_x, index_y);
+    }
+
     private void drawChessBoard(Graphics g) {
         g.setColor(Color.ORANGE);
         g.fillRect(0, 0, panelSide, panelSide);
@@ -83,7 +93,7 @@ public class GamePanel extends JPanel {
 
             @Override
             public void mouseReleased(MouseEvent e) {
-                if (client.isMatched = true) {
+                if (client.isMatched) {
                     Point mousePoint = getMousePosition();
                     if (mousePoint.x > -1 && mousePoint.y > -1 && mousePoint.x < panelSide && mousePoint.y < panelSide) {
                         int index_x = (mousePoint.x + (LATTICE_SIDE >> 1)) / LATTICE_SIDE - 1;
@@ -92,18 +102,22 @@ public class GamePanel extends JPanel {
                             return;
                         }
                         ChessBoard.ChessStep step = new ChessBoard.ChessStep(color, new ChessBoard.ChessPoint(index_x, index_y));
+                        int cID = getCID();
                         Message msg = new Message(
-                                "ClientCommend",
+                                "ClientCommand",
                                 "DropChess",
                                 new HashMap<String, String>() {
                                     {
-                                        put("cid", String.valueOf(getCID()));
+                                        put("cid", String.valueOf(cID));
                                         put("x", String.valueOf(index_x));
                                         put("y", String.valueOf(index_y));
-                                        put("color", String.valueOf("color"));
+                                        put("color", String.valueOf(color));
                                     }
                                 });
                         client.sendMessage(gson.toJson(msg));
+                        if (checkCommand(cID)) {
+                            dropChess(step);
+                        }
                     }
                 }
             }
@@ -182,5 +196,22 @@ public class GamePanel extends JPanel {
         } else {
             g.drawLine(x + (LATTICE_SIDE >> 1), y, x + (LATTICE_SIDE >> 1), y + LATTICE_SIDE);
         }
+    }
+
+    private boolean checkCommand(int cID) {
+        BufferedReader br = client.getBr();
+        try {
+            String line = br.readLine();
+            Message msg = gson.fromJson(line, Message.class);
+            if (msg.type.equals("ClientReply")) {
+                int cid = Integer.parseInt(msg.info.get("cid"));
+                if (cid == cID) {
+                    return msg.title.equals("DealSuccessfully");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

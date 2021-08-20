@@ -9,6 +9,7 @@ import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
+import java.util.HashMap;
 
 public class ListenerThread extends Thread{
     static Socket socket = null;
@@ -49,6 +50,9 @@ public class ListenerThread extends Thread{
                     case "ServerReply":
                         doServerReply(msg);
                         break;
+                    case "ClientCommand":
+                        doClientCommand(msg);
+                        break;
                     default:
                         break;
                 }
@@ -82,5 +86,63 @@ public class ListenerThread extends Thread{
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void doClientCommand(Message msg) {
+        try {
+            switch (msg.title) {
+                case "DropChess":
+                    dealDropChessCommand(msg);
+                    break;
+                case "StartSession":
+                    dealStartSessionCommand(msg);
+                    break;
+                default:
+                    break;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void dealDropChessCommand(Message msg) {
+        int cID = Integer.parseInt(msg.info.get("cid"));
+        int index_x = Integer.parseInt(msg.info.get("x"));
+        int index_y = Integer.parseInt(msg.info.get("y"));
+        int color = Integer.parseInt(msg.info.get("color"));
+        if (client.gameFrame.gamePanel.checkAvailable(index_x, index_y)) {
+            client.gameFrame.gamePanel.dropChess(
+                    new ChessBoard.ChessStep(color, new ChessBoard.ChessPoint(index_x, index_y)));
+            Message message = new Message(
+                    "ClientReply",
+                    "DealSuccessfully",
+                    new HashMap<String, String>() {
+                        {
+                            put("cid", String.valueOf(cID));
+                        }
+                    });
+            client.sendMessage(gson.toJson(message));
+        } else {
+            Message message = new Message(
+                    "ClientReply",
+                    "DealFailed",
+                    new HashMap<String, String>() {
+                        {
+                            put("cid", String.valueOf(cID));
+                            put("info", "非法位置");
+                        }
+                    });
+            client.sendMessage(gson.toJson(message));
+        }
+    }
+
+    private void dealStartSessionCommand(Message msg) {
+        int color = Integer.parseInt(msg.info.get("color"));
+        this.client.gameFrame.gamePanel.initSession(color);
+        Message message = new Message(
+                "ClientReply",
+                "StartSessionSuccessfully"
+        );
+        client.sendMessage(gson.toJson(message));
     }
 }
