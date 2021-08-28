@@ -68,19 +68,6 @@ public class GamePanel extends JPanel {
         if (dropChessAvailable(step)) {
             this.chessBoard.dropChess(step);
             drawChess(step);
-            int cID = getCID();
-            Message msg = new Message(
-                    "ClientCommand",
-                    "DropChess",
-                    new HashMap<String, String>() {
-                        {
-                            put("cid", String.valueOf(cID));
-                            put("x", String.valueOf(step.getChessPoint().getX()));
-                            put("y", String.valueOf(step.getChessPoint().getY()));
-                            put("color", String.valueOf(color));
-                        }
-                    });
-            client.sendMessage(gson.toJson(msg));
             if (this.waiting_color == BLACK_TYPE) {
                 this.waiting_color = WHITE_TYPE;
             } else if (this.waiting_color == WHITE_TYPE) {
@@ -117,6 +104,10 @@ public class GamePanel extends JPanel {
 
             @Override
             public void mouseReleased(MouseEvent e) {
+//                System.out.println("----------------------------------------");
+//                System.out.println("This color  " + color);
+//                System.out.println("Waiting color  " + waiting_color);
+//                System.out.println("++++++++++++++++++++++++++++++++++++++++");
                 if (client.isMatched) {
                     Point mousePoint = getMousePosition();
                     if (mousePoint.x > -1 && mousePoint.y > -1 && mousePoint.x < panelSide && mousePoint.y < panelSide) {
@@ -127,8 +118,23 @@ public class GamePanel extends JPanel {
                         }
                         ChessBoard.ChessStep step = new ChessBoard.ChessStep(color, new ChessBoard.ChessPoint(index_x, index_y));
                         dropChess(step);
+                        int cID = getCID();
+                        Message msg = new Message(
+                                "ClientCommand",
+                                "DropChess",
+                                new HashMap<String, String>() {
+                                    {
+                                        put("cid", String.valueOf(cID));
+                                        put("x", String.valueOf(step.getChessPoint().getX()));
+                                        put("y", String.valueOf(step.getChessPoint().getY()));
+                                        put("color", String.valueOf(color));
+                                    }
+                                });
+                        client.sendMessage(gson.toJson(msg));
                     }
                 }
+                System.out.println("This color  " + color);
+                System.out.println("Waiting color  " + waiting_color);
             }
 
             @Override

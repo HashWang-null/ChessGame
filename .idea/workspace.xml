@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59bfe01e-6dbc-4e95-9fc4-a9031309d035" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/ListenerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ListenerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ServerThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +154,7 @@
       <workItem from="1629438949900" duration="5872000" />
       <workItem from="1629609426857" duration="5358000" />
       <workItem from="1630071095540" duration="869000" />
-      <workItem from="1630133866400" duration="5906000" />
+      <workItem from="1630133866400" duration="8579000" />
     </task>
     <servers />
   </component>
@@ -172,22 +178,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="977" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1629377683496" />
-    <state width="1750" height="407" key="GridCell.Tab.0.bottom" timestamp="1630141441904">
+    <state width="1103" height="77" key="GridCell.Tab.0.bottom" timestamp="1630148524382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1750" height="407" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630141441904" />
-    <state width="1750" height="407" key="GridCell.Tab.0.center" timestamp="1630141441904">
+    <state width="1103" height="77" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630148524382" />
+    <state width="1103" height="77" key="GridCell.Tab.0.center" timestamp="1630148524382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1750" height="407" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630141441904" />
-    <state width="1750" height="407" key="GridCell.Tab.0.left" timestamp="1630141441904">
+    <state width="1103" height="77" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630148524382" />
+    <state width="1103" height="77" key="GridCell.Tab.0.left" timestamp="1630148524382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1750" height="407" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630141441904" />
-    <state width="1750" height="407" key="GridCell.Tab.0.right" timestamp="1630141441904">
+    <state width="1103" height="77" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630148524382" />
+    <state width="1103" height="77" key="GridCell.Tab.0.right" timestamp="1630148524382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1750" height="407" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630141441904" />
+    <state width="1103" height="77" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630148524382" />
     <state width="1750" height="156" key="GridCell.Tab.1.bottom" timestamp="1630139308226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -269,6 +275,11 @@
           <url>file://$PROJECT_DIR$/src/client/Client.java</url>
           <line>72</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/client/GamePanel.java</url>
+          <line>133</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/client/GamePanel.java</url>

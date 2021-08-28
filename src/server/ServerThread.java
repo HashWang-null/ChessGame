@@ -54,7 +54,7 @@ public class ServerThread extends Thread {
         try {
             String line;
             while ((line = br.readLine()) != null) {
-                System.out.println(line);
+                System.out.println( getAddress() + ":" + getPort() + " " + line);
                 parseMessage(line);
             }
         } catch (SocketException ignored) {
