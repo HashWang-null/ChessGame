@@ -65,7 +65,8 @@ public class GamePanel extends JPanel {
     }
 
     public void dropChess(ChessBoard.ChessStep step) {
-        if (dropChessAvailable(step)) {
+//        if (dropChessAvailable(step)) {
+        if (true) {
             this.chessBoard.dropChess(step);
             drawChess(step);
             if (this.waiting_color == BLACK_TYPE) {
@@ -113,28 +114,30 @@ public class GamePanel extends JPanel {
                     if (mousePoint.x > -1 && mousePoint.y > -1 && mousePoint.x < panelSide && mousePoint.y < panelSide) {
                         int index_x = (mousePoint.x + (LATTICE_SIDE >> 1)) / LATTICE_SIDE - 1;
                         int index_y = (mousePoint.y + (LATTICE_SIDE >> 1)) / LATTICE_SIDE - 1;
-                        if (index_x < 0 || index_y < 0 || index_x >= SIDE_NUM || index_y >= SIDE_NUM) {
-                            return;
+//                        if (index_x < 0 || index_y < 0 || index_x >= SIDE_NUM || index_y >= SIDE_NUM) {
+//                            return;
+//                        }
+                        if (checkDropChess(index_x, index_y)) {
+                            ChessBoard.ChessStep step = new ChessBoard.ChessStep(color, new ChessBoard.ChessPoint(index_x, index_y));
+                            dropChess(step);
+                            int cID = getCID();
+                            Message msg = new Message(
+                                    "ClientCommand",
+                                    "DropChess",
+                                    new HashMap<String, String>() {
+                                        {
+                                            put("cid", String.valueOf(cID));
+                                            put("x", String.valueOf(step.getChessPoint().getX()));
+                                            put("y", String.valueOf(step.getChessPoint().getY()));
+                                            put("color", String.valueOf(color));
+                                        }
+                                    });
+                            client.sendMessage(gson.toJson(msg));
                         }
-                        ChessBoard.ChessStep step = new ChessBoard.ChessStep(color, new ChessBoard.ChessPoint(index_x, index_y));
-                        dropChess(step);
-                        int cID = getCID();
-                        Message msg = new Message(
-                                "ClientCommand",
-                                "DropChess",
-                                new HashMap<String, String>() {
-                                    {
-                                        put("cid", String.valueOf(cID));
-                                        put("x", String.valueOf(step.getChessPoint().getX()));
-                                        put("y", String.valueOf(step.getChessPoint().getY()));
-                                        put("color", String.valueOf(color));
-                                    }
-                                });
-                        client.sendMessage(gson.toJson(msg));
                     }
                 }
-                System.out.println("This color  " + color);
-                System.out.println("Waiting color  " + waiting_color);
+//                System.out.println("This color  " + color);
+//                System.out.println("Waiting color  " + waiting_color);
             }
 
             @Override
@@ -233,5 +236,9 @@ public class GamePanel extends JPanel {
             e.printStackTrace();
         }
         return false;
+    }
+
+    private boolean checkDropChess(int index_x, int index_y) {
+        return index_x >= 0 && index_y >= 0 && index_x < SIDE_NUM && index_y < SIDE_NUM && color == waiting_color;
     }
 }
