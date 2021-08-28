@@ -110,7 +110,7 @@ public class ListenerThread extends Thread{
         int index_x = Integer.parseInt(msg.info.get("x"));
         int index_y = Integer.parseInt(msg.info.get("y"));
         int color = Integer.parseInt(msg.info.get("color"));
-        if (client.gameFrame.gamePanel.checkAvailable(index_x, index_y)) {
+        if (client.gameFrame.gamePanel.checkDropChess(index_x, index_y)) {
             client.gameFrame.gamePanel.dropChess(
                     new ChessBoard.ChessStep(color, new ChessBoard.ChessPoint(index_x, index_y)));
 

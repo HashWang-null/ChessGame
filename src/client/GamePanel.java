@@ -77,9 +77,9 @@ public class GamePanel extends JPanel {
         }
     }
 
-    public boolean checkAvailable(int index_x, int index_y) {
-        return chessBoard.checkAvailable(index_x, index_y);
-    }
+//    public boolean checkAvailable(int index_x, int index_y) {
+//        return chessBoard.checkAvailable(index_x, index_y);
+//    }
 
     private void drawChessBoard(Graphics g) {
         g.setColor(Color.ORANGE);
@@ -152,10 +152,10 @@ public class GamePanel extends JPanel {
         });
     }
 
-    private boolean dropChessAvailable(ChessBoard.ChessStep step) {
-        int color = step.getChessType();
-        return color == waiting_color;
-    }
+//    private boolean dropChessAvailable(ChessBoard.ChessStep step) {
+//        int color = step.getChessType();
+//        return color == waiting_color;
+//    }
 
     private void initKeyBoardListener() {
         this.addKeyListener(new KeyAdapter() {
@@ -238,7 +238,7 @@ public class GamePanel extends JPanel {
         return false;
     }
 
-    private boolean checkDropChess(int index_x, int index_y) {
+    public boolean checkDropChess(int index_x, int index_y) {
         return index_x >= 0 && index_y >= 0 && index_x < SIDE_NUM && index_y < SIDE_NUM && color == waiting_color;
     }
 }
