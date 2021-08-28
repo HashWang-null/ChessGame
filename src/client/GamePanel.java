@@ -20,7 +20,7 @@ public class GamePanel extends JPanel {
     public static final int BLANK           = ChessBoard.BLANK;
 
     private int panelSide = (SIDE_NUM+1) * LATTICE_SIDE;;
-    public int color;
+    public int color = BLANK;
     private ChessBoard chessBoard;
     public Client client;
     private Gson gson = new Gson();
@@ -115,9 +115,7 @@ public class GamePanel extends JPanel {
                                     }
                                 });
                         client.sendMessage(gson.toJson(msg));
-                        if (checkCommand(cID)) {
-                            dropChess(step);
-                        }
+                        dropChess(step);
                     }
                 }
             }

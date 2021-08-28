@@ -79,9 +79,9 @@ public class Client {
             this.isMatched = true;
             this.gameFrame.rightPanel.setPartner(partnerAddress);
 //            this.gameFrame.gamePanel.color = GamePanel.BLACK_TYPE;
-//            startSession(GamePanel.WHITE_TYPE);
-            this.gameFrame.gamePanel.initSession(GamePanel.BLANK);
+            this.gameFrame.gamePanel.initSession(GamePanel.BLACK_TYPE);
             sendStartSession(GamePanel.WHITE_TYPE);
+//            sendStartSession(GamePanel.WHITE_TYPE);
         } else {
             throw new RuntimeException();
         }

@@ -139,10 +139,10 @@ public class ListenerThread extends Thread{
     private void dealStartSessionCommand(Message msg) {
         int color = Integer.parseInt(msg.info.get("color"));
         this.client.gameFrame.gamePanel.initSession(color);
-        Message message = new Message(
-                "ClientReply",
-                "StartSessionSuccessfully"
-        );
-        this.client.sendMessage(gson.toJson(message));
+//        Message message = new Message(
+//                "ClientReply",
+//                "StartSessionSuccessfully"
+//        );
+//        this.client.sendMessage(gson.toJson(message));
     }
 }
