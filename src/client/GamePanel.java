@@ -26,6 +26,9 @@ public class GamePanel extends JPanel {
     private Gson gson = new Gson();
     private int cID = 0;
 
+    private int waiting_color;
+//    private boolean isAvailable;
+
     public GamePanel() {
         initPanel();
     }
@@ -57,12 +60,33 @@ public class GamePanel extends JPanel {
             throw new RuntimeException("颜色匹配错误");
         }
         this.color = color;
+        this.waiting_color = BLACK_TYPE;
         repaint();
     }
 
     public void dropChess(ChessBoard.ChessStep step) {
-        this.chessBoard.dropChess(step);
-        drawChess(step);
+        if (dropChessAvailable(step)) {
+            this.chessBoard.dropChess(step);
+            drawChess(step);
+            int cID = getCID();
+            Message msg = new Message(
+                    "ClientCommand",
+                    "DropChess",
+                    new HashMap<String, String>() {
+                        {
+                            put("cid", String.valueOf(cID));
+                            put("x", String.valueOf(step.getChessPoint().getX()));
+                            put("y", String.valueOf(step.getChessPoint().getY()));
+                            put("color", String.valueOf(color));
+                        }
+                    });
+            client.sendMessage(gson.toJson(msg));
+            if (this.waiting_color == BLACK_TYPE) {
+                this.waiting_color = WHITE_TYPE;
+            } else if (this.waiting_color == WHITE_TYPE) {
+                this.waiting_color = BLACK_TYPE;
+            }
+        }
     }
 
     public boolean checkAvailable(int index_x, int index_y) {
@@ -102,19 +126,6 @@ public class GamePanel extends JPanel {
                             return;
                         }
                         ChessBoard.ChessStep step = new ChessBoard.ChessStep(color, new ChessBoard.ChessPoint(index_x, index_y));
-                        int cID = getCID();
-                        Message msg = new Message(
-                                "ClientCommand",
-                                "DropChess",
-                                new HashMap<String, String>() {
-                                    {
-                                        put("cid", String.valueOf(cID));
-                                        put("x", String.valueOf(index_x));
-                                        put("y", String.valueOf(index_y));
-                                        put("color", String.valueOf(color));
-                                    }
-                                });
-                        client.sendMessage(gson.toJson(msg));
                         dropChess(step);
                     }
                 }
@@ -130,6 +141,11 @@ public class GamePanel extends JPanel {
 
             }
         });
+    }
+
+    private boolean dropChessAvailable(ChessBoard.ChessStep step) {
+        int color = step.getChessType();
+        return color == waiting_color;
     }
 
     private void initKeyBoardListener() {

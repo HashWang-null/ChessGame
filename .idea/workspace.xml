@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59bfe01e-6dbc-4e95-9fc4-a9031309d035" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/五子棋游戏/client/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/ListenerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ListenerThread.java" afterDir="false" />
     </list>
@@ -154,7 +148,7 @@
       <workItem from="1629438949900" duration="5872000" />
       <workItem from="1629609426857" duration="5358000" />
       <workItem from="1630071095540" duration="869000" />
-      <workItem from="1630133866400" duration="4897000" />
+      <workItem from="1630133866400" duration="5906000" />
     </task>
     <servers />
   </component>

@@ -113,26 +113,27 @@ public class ListenerThread extends Thread{
         if (client.gameFrame.gamePanel.checkAvailable(index_x, index_y)) {
             client.gameFrame.gamePanel.dropChess(
                     new ChessBoard.ChessStep(color, new ChessBoard.ChessPoint(index_x, index_y)));
-            Message message = new Message(
-                    "ClientReply",
-                    "DealSuccessfully",
-                    new HashMap<String, String>() {
-                        {
-                            put("cid", String.valueOf(cID));
-                        }
-                    });
-            client.sendMessage(gson.toJson(message));
+
+//            Message message = new Message(
+//                    "ClientReply",
+//                    "DealSuccessfully",
+//                    new HashMap<String, String>() {
+//                        {
+//                            put("cid", String.valueOf(cID));
+//                        }
+//                    });
+//            client.sendMessage(gson.toJson(message));
         } else {
-            Message message = new Message(
-                    "ClientReply",
-                    "DealFailed",
-                    new HashMap<String, String>() {
-                        {
-                            put("cid", String.valueOf(cID));
-                            put("info", "非法位置");
-                        }
-                    });
-            client.sendMessage(gson.toJson(message));
+//            Message message = new Message(
+//                    "ClientReply",
+//                    "DealFailed",
+//                    new HashMap<String, String>() {
+//                        {
+//                            put("cid", String.valueOf(cID));
+//                            put("info", "非法位置");
+//                        }
+//                    });
+//            client.sendMessage(gson.toJson(message));
         }
     }
 
