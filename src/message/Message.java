@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Message {
+    public int CID;
     public String type;
     public String title;
     public HashMap<String, String> info;
@@ -21,6 +22,10 @@ public class Message {
         this.title = title;
         this.type = type;
         this.info = info;
+    }
+
+    public void setCID(int CID) {
+        this.CID = CID;
     }
 
     @Override

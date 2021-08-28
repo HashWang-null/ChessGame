@@ -143,6 +143,6 @@ public class ListenerThread extends Thread{
                 "ClientReply",
                 "StartSessionSuccessfully"
         );
-        client.sendMessage(gson.toJson(message));
+        this.client.sendMessage(gson.toJson(message));
     }
 }

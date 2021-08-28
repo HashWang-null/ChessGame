@@ -99,19 +99,19 @@ public class Client {
         this.gameFrame.rightPanel.setMatchingPartner();
     }
 
-    public void sendStartSession(int color) {
+    public void sendStartSession(int p_color) {
         if (!this.position.equals("host")) {
             throw new RuntimeException("不是主持人还想开局？");
         }
-        Message msg = new Message(
+        Message t_msg = new Message(
                 "ClientCommand",
                 "StartSession",
                 new HashMap<String, String>() {
                     {
-                        put("color", String.valueOf(color));
+                        put("color", String.valueOf(p_color));
                     }
                 });
-        this.sendMessage(gson.toJson(msg));
+        this.sendMessage(gson.toJson(t_msg));
         //等待对方确认
     }
 
