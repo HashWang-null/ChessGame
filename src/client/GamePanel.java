@@ -117,7 +117,7 @@ public class GamePanel extends JPanel {
 //                        if (index_x < 0 || index_y < 0 || index_x >= SIDE_NUM || index_y >= SIDE_NUM) {
 //                            return;
 //                        }
-                        if (checkDropChess(index_x, index_y)) {
+                        if (checkDropChess(index_x, index_y, color)) {
                             ChessBoard.ChessStep step = new ChessBoard.ChessStep(color, new ChessBoard.ChessPoint(index_x, index_y));
                             dropChess(step);
                             int cID = getCID();
@@ -238,7 +238,7 @@ public class GamePanel extends JPanel {
         return false;
     }
 
-    public boolean checkDropChess(int index_x, int index_y) {
+    public boolean checkDropChess(int index_x, int index_y, int color) {
         return index_x >= 0 && index_y >= 0 && index_x < SIDE_NUM && index_y < SIDE_NUM && color == waiting_color;
     }
 }
