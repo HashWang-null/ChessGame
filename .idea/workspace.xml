@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4cfb8517-d115-4097-b5ae-9d0593851ee8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="五子棋" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ufkK9d00UjvOyA2fhfqp6gmG21" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="D:/Android" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/client" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Idea Projects\五子棋\src\client" />
+      <recent name="D:\Projects\Idea Projects\五子棋\src\Server" />
+      <recent name="D:\Projects\Idea Projects\五子棋\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Play">
+    <configuration name="Play" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.Play" />
+      <module name="五子棋" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Server" />
+      <module name="五子棋" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="server.Server" />
+      <module name="五子棋" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.Play" />
+      <module name="五子棋" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.WebGame" />
+      <module name="五子棋" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="miglayout-core.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/lib/miglayout-core.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Play" />
+        <item itemvalue="Application.Server (1)" />
+        <item itemvalue="JAR Application.miglayout-core.jar" />
+        <item itemvalue="Application.WebGame" />
+        <item itemvalue="Application.Server" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4cfb8517-d115-4097-b5ae-9d0593851ee8" name="Default Changelist" comment="" />
+      <created>1625063964284</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625063964284</updated>
+      <workItem from="1625063965519" duration="2037000" />
+      <workItem from="1625066379330" duration="257000" />
+      <workItem from="1625102243141" duration="9729000" />
+      <workItem from="1625136543697" duration="19992000" />
+      <workItem from="1625218685651" duration="599000" />
+      <workItem from="1625486366235" duration="603000" />
+      <workItem from="1625822336551" duration="1609000" />
+      <workItem from="1625831000061" duration="62000" />
+      <workItem from="1625831079385" duration="31000" />
+      <workItem from="1625831178316" duration="21747000" />
+      <workItem from="1625887485668" duration="987000" />
+      <workItem from="1625898611612" duration="6961000" />
+      <workItem from="1625928047641" duration="2103000" />
+      <workItem from="1626012322243" duration="2810000" />
+      <workItem from="1626446173165" duration="2383000" />
+      <workItem from="1626661333437" duration="598000" />
+      <workItem from="1626662944914" duration="593000" />
+      <workItem from="1626677312088" duration="1196000" />
+      <workItem from="1629116130717" duration="1699000" />
+      <workItem from="1629201811360" duration="13000" />
+      <workItem from="1630215173861" duration="32389000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1032" y="178" key="#Project_Structure" timestamp="1630237619877">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1032" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1630237619877" />
+    <state x="763" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1630239387809">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="763" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630239387809" />
+    <state x="731" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1630251775406">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1630251775406" />
+    <state x="1038" y="311" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1630239371153">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1038" y="311" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630239371153" />
+    <state x="864" y="372" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1625846173482">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="864" y="372" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1625846173482" />
+    <state x="775" y="227" key="FileChooserDialogImpl" timestamp="1630222736587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="775" y="227" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630222736587" />
+    <state width="1877" height="232" key="GridCell.Tab.0.bottom" timestamp="1630253718302">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630253718302" />
+    <state width="1877" height="232" key="GridCell.Tab.0.center" timestamp="1630253718302">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="232" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630253718302" />
+    <state width="1877" height="232" key="GridCell.Tab.0.left" timestamp="1630253718302">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="232" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630253718302" />
+    <state width="1877" height="232" key="GridCell.Tab.0.right" timestamp="1630253718302">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="232" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630253718302" />
+    <state width="1508" height="144" key="GridCell.Tab.1.bottom" timestamp="1630252499386">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1508" height="144" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630252499386" />
+    <state width="1508" height="144" key="GridCell.Tab.1.center" timestamp="1630252499386">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1508" height="144" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630252499386" />
+    <state width="1508" height="144" key="GridCell.Tab.1.left" timestamp="1630252499386">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1508" height="144" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630252499386" />
+    <state width="1508" height="144" key="GridCell.Tab.1.right" timestamp="1630252499386">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1508" height="144" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630252499386" />
+    <state x="610" y="108" key="SettingsEditor" timestamp="1630222742458">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="610" y="108" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1630222742458" />
+    <state x="828" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1630216238624">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="828" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1630216238624" />
+    <state x="638" y="234" key="extract.method.dialog" timestamp="1625139489139">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="638" y="234" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625139489139" />
+    <state x="498" y="170" key="new project wizard" timestamp="1629117463679">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="498" y="170" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1629117463679" />
+    <state x="986" y="155" key="refactoring.ChangeSignatureDialog" timestamp="1630221144063">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="986" y="155" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630221144063" />
+    <state x="1019" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1630235486856">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1019" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1630235486856" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/client/Recipient.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/client/Kernel.java</url>
+          <line>274</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/client/Kernel.java</url>
+          <line>242</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
